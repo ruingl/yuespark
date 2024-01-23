@@ -1,0 +1,144 @@
+{{!< main}}
+
+<div class="p-4">
+
+  <h2>Yue Docs v1.0.3</h2>
+  <p>Credits to Rui, Liane</p>
+
+  <h2>Table of Contents</h2>
+
+  <ul>
+    <li><a href="#commands">Commands</a>
+      <ul>
+        <li><a href="#ai">ai</a></li>
+        <li><a href="#prefix">prefix</a></li>
+        <li><a href="#help">help</a></li>
+      </ul>
+    </li>
+    <li><a href="#database-commands">Database Commands</a>
+      <ul>
+        <li><a href="#addusertodb">addUserToDB</a></li>
+        <li><a href="#listusers">listUsers</a></li>
+        <li><a href="#getthreadinfo">getThreadInfo</a></li>
+        <li><a href="#getuserinfo">getUserInfo</a></li>
+      </ul>
+    </li>
+    <li><a href="#box-functions">Box Functions</a>
+      <ul>
+        <li><a href="#boxreact">box.react</a></li>
+        <li><a href="#boxreply">box.reply</a></li>
+        <li><a href="#boxadd">box.add</a></li>
+        <li><a href="#boxkick">box.kick</a></li>
+        <li><a href="#boxsend">box.send</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <h2 id="commands">Commands</h2>
+
+  <article id="ai">
+    <h3>1. ai</h3>
+    <p>:ai [question] - Ask the chatbot a question, and it will generate a response using the AI API.</p>
+    <p>Example:</p>
+    <pre><code>:ai How does photosynthesis work?</code></pre>
+  </article>
+
+  <article id="prefix">
+    <h3>2. prefix</h3>
+    <p>Get the bot's current command prefix.</p>
+    <p>Example:</p>
+    <pre><code>prefix</code></pre>
+  </article>
+
+  <article id="help">
+    <h3>3. help</h3>
+    <p>View a list of available commands and their descriptions.</p>
+    <p>Example:</p>
+    <pre><code>:help</code></pre>
+  </article>
+
+  <h2 id="database-commands">Database Commands</h2>
+
+  <article id="addusertodb">
+    <h3>1. addUserToDB</h3>
+    <p>`addUserToDB(api: object, userID: string): void` - Add a user to the SQLite database with the provided user ID Example usage:
+    ```javascript
+    addUserToDB(api, "1234567890");
+    ```
+  </article>
+
+  <article id="listusers">
+    <h3>2. listUsers</h3>
+    <p>`listUsers(api: object): void` - List users in the current SQLite database.</p>
+    <p>Example usage:</p>
+    ```javascript
+    listUsers(api);
+    ```
+  </article>
+
+  <article id="getthreadinfo">
+    <h3>3. getThreadInfo</h3>
+    <p>`getThreadInfo(threadID: string): object | null` - Get information about a thread from the SQLite database.</p>
+    <p>Example usage:</p>
+    ```javascript
+    getThreadInfo("987654321");
+    ```
+  </article>
+
+  <article id="getuserinfo">
+    <h3>4. getUserInfo</h3>
+    <p>`getUserInfo(userID: string): object | null` - Get information about a user from the SQLite database.</p>
+    <p>Example usage:</p>
+    ```javascript
+    getUserInfo("1234567890");
+    ```
+  </article>
+
+  <h2 id="box-functions">Box Functions</h2>
+
+  <article id="boxreact">
+    <h3>1. box.react</h3>
+    <p>`box.react(emoji: string): void` - React to the current message with a specified emoji.</p>
+    <p>Example usage:</p>
+    ```javascript
+    box.react("😊");
+    ```
+  </article>
+
+  <article id="boxreply">
+    <h3>2. box.reply</h3>
+    <p>`box.reply(msg: string): void` - Reply to the current message with a specified text.</p>
+    <p>Example usage:</p>
+    ```javascript
+    box.reply("Hello, World!");
+    ```
+  </article>
+
+  <article id="boxadd">
+    <h3>3. box.add</h3>
+    <p>`box.add(uid: string): void` - Add a user with the given UID to the current group chat.</p>
+    <p>Example usage:</p>
+    ```javascript
+    box.add("1234567890");
+    ```
+  </article>
+
+  <article id="boxkick">
+    <h3>4. box.kick</h3>
+    <p>`box.kick(uid: string): void` - Remove a user with the given UID from the current group chat.</p>
+    <p>Example usage:</p>
+    ```javascript
+    box.kick("1234567890");
+    ```
+  </article>
+
+  <article id="boxsend">
+    <h3>5. box.send</h3>
+    <p>`box.send(msg: string): void` - Send a message to the current thread without replying to a specific message.</p>
+    <p>Example usage:</p>
+    ```javascript
+    box.send("Hello, World!");
+    ```
+  </article>
+
+</div>
